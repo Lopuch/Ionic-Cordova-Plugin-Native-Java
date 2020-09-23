@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-zebra-test" version="1.0" xmlns="http://apache.org/cordova/ns/plugins/1.0">
+  <name>ZebraTestPlugin</name>
+  <js-module name="ZebraTestPlugin" src="www/ZebraTestPlugin.js">
+    <clobbers target="ZebraTestPlugin"/>
+  </js-module>
+  <platform name="android">
+    <config-file parent="/*" target="res/xml/config.xml">
+      <feature name="ZebraTestPlugin">
+        <param name="android-package" value="cordova.plugin.zebra.test.ZebraTestPlugin"/>
+      </feature>
+    </config-file>
+    <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+
+
+    <framework src="src/android/build-extra.gradle" custom="true" type="gradleReference" />
+
+    <source-file src="src/android/ZebraTestPlugin.java" target-dir="src/cordova-plugin-zebra-test/ZebraTestPlugin"/>
+    <source-file src="src/android/libs/ZSDK_ANDROID_API.jar" target-dir="libs"/>
+
+
+  </platform>
+</plugin>

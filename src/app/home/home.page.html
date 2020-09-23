@@ -1,0 +1,17 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      First Cordova Plugin
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div>
+    {{result | json}}
+  </div>
+  <div>
+    {{error | json}}
+  </div>
+  <ion-button (click)="onMyZebraTestClick()">ZebraTest</ion-button>
+</ion-content>
