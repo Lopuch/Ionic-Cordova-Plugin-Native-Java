@@ -12,10 +12,13 @@ export class MyZebraTest extends IonicNativePlugin {
   // clobbers target in the plugin.xml of plugin
   static pluginRef = 'ZebraTestPlugin';
   static repo = 'YOUR_GITHUB_URL';
-  static platforms = ["Android"];
+  static platforms = ['Android'];
 
-  coolMethod(text: string): Promise<boolean>{
-    return cordova(this, "coolMethod", {}, arguments/*[{param1: 1, param2: 2}]*/);
+  coolMethod(args: {objednavkaC: string, mnozstvi: string, vyrobek: string, name: string, kontrola: string, charge: string, datum: string}): Promise<boolean> {
+
+    //return cordova(this, "coolMethod", {}, arguments/*[{param1: 1, param2: 2}]*/);
+    return cordova(this, 'coolMethod', {}, [
+      args]);
   };
 
   // /**

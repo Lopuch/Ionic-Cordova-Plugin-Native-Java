@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      First Cordova Plugin
+      Pokus tisk zebra
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -10,8 +10,8 @@
   <div>
     {{result | json}}
   </div>
-  <div>
-    {{error | json}}
+  <div *ngIf="error">
+    ERR: {{error | json}}
   </div>
   <ion-button (click)="onMyZebraTestClick()">ZebraTest - click and wait 5 sec</ion-button>
 </ion-content>
