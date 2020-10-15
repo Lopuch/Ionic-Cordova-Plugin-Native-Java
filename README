@@ -1,4 +1,4 @@
-You need to run these commands first:
+You need to run these commands first (withoutionic cordova plugin add the build fails - I don't know why):
 ionic cordova plugin add "./src/myPlugins/ZebraTestPlugin" --save
 npm i
 ionic cordova run android
